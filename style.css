@@ -1,0 +1,199 @@
+:root {
+  --main-green: #10bc69;
+  --heading-color: #5f687b;
+  --heading-font: "Raleway", sans-serif;
+}
+/*start of hero styling*/
+.hero {
+  min-height: 70vh;
+  position: relative;
+  padding: 120px 0 60px 0;
+  display: flex;
+  align-items: center;
+}
+.hero h1 {
+  color: var(--heading-color);
+  font-family: var(--heading-font);
+  font-size: 48px;
+  font-weight: 700;
+}
+.hero p {
+  color: color-mix(in srgb, #444444, transparent 30%);
+  font-size: 20px;
+  margin: 5px 0 30px 0;
+  font-weight: 400;
+}
+.hero .btn-get-started {
+  color: white;
+  background: var(--main-green);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
+  font-family: var(--heading-font);
+  font-weight: 400;
+  font-size: 15px;
+  padding: 8px 28px 8px 28px;
+  border-radius: 50px;
+  transition: 0.5s;
+}
+.hero .btn-get-started:hover {
+  color: white;
+  background: color-mix(in srgb, #10bc69, transparent 15%);
+}
+.hero .btn-watch-video {
+  font-size: 16px;
+  font-weight: 600;
+  transition: 0.5s;
+}
+.hero .btn-watch-video:hover {
+  color: var(--main-green);
+}
+.hero .btn-watch-video i {
+  color: var(--main-green);
+  font-size: 32px;
+}
+.hero img {
+  animation: up-down 2s ease-in-out infinite alternate-reverse both;
+}
+@keyframes up-down {
+  0% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+/* end of hero */
+
+/* start of services */
+.featured-services .service-item {
+  background-color: color-mix(in srgb, #444444, transparent 96%);
+  padding: 50px 30px;
+  transition: all ease-in-out 0.4s;
+  height: 100%;
+  bottom: 0;
+}
+.featured-services .service-item:hover {
+  bottom: 10px;
+}
+.featured-services .service-item:hover h4 a {
+  color: var(--main-green);
+}
+.featured-services .service-item .icon {
+  margin-bottom: 10px;
+}
+.featured-services .service-item .icon i {
+  color: var(--main-green);
+  font-size: 36px;
+  transition: 0.3s;
+}
+.featured-services .service-item h4 {
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+.featured-services .service-item p {
+  line-height: 24px;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+.featured-services .service-item h4 a {
+  color: var(--heading-color);
+  transition: ease-in-out 0.3s;
+  text-decoration: none;
+}
+/* end of services */
+
+/* start of about */
+.about {
+  padding: 80px 0;
+}
+.section-title span {
+  position: absolute;
+  top: 4px;
+  color: color-mix(in srgb, var(--heading-color), transparent 92%);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -110%);
+  z-index: 1;
+  font-weight: 700;
+  font-size: 52px;
+}
+.section-title h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-bottom: 0;
+  position: relative;
+  z-index: 2;
+  color: var(--heading-color);
+}
+.pulsating-play-btn {
+  width: 94px;
+  height: 94px;
+  background: radial-gradient(
+    var(--main-green) 50%,
+    color-mix(in srgb, var(--main-green), transparent 75%) 52%
+  );
+  border-radius: 50%;
+  display: block;
+  position: absolute;
+  left: calc(50% - 47px);
+  top: calc(50% - 47px);
+  overflow: hidden;
+}
+.pulsating-play-btn:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-40%) translateY(-50%);
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 15px solid #fff;
+  z-index: 100;
+  transition: all 400ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+.about .content h3 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--heading-color);
+}
+.about .content ul {
+  list-style: none;
+  padding: 0;
+}
+.about .content ul li {
+  padding: 10px 0 0 0;
+  display: flex;
+}
+.about .content ul i {
+  color: var(--main-green);
+  margin-right: 0.5rem;
+  /* line-height: 1.2; */
+  font-size: 1.25rem;
+}
+/* end of about */
+
+/* start of stats */
+section.stats {
+  padding: 0 0 60px;
+}
+.stats .stats-item {
+  padding: 30px;
+  width: 100%;
+}
+.stats .stats-item span {
+  font-size: 48px;
+  display: block;
+  color: var(--main-green);
+  font-weight: 700;
+}
+.stats .stats-item p {
+  color: color-mix(in srgb, #444444, transparent 40%);
+  padding: 0;
+  margin: 0;
+  font-family: var(--heading-font);
+  font-size: 15px;
+  font-weight: 600;
+}
